@@ -1,3 +1,4 @@
+import 'package:conversor_moedas/app/widgets/currency_box.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -24,59 +25,13 @@ class HomeView extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: size.height * .02,
+                height: size.height * .05,
               ),
+              CurrencyBox(),
               SizedBox(
-                width: size.width,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: SizedBox(
-                        height: 56,
-                        child: DropdownButton(
-                          isExpanded: true,
-                          underline: Container(
-                            height: 1,
-                            color: Colors.amber,
-                          ),
-                          items: [
-                            DropdownMenuItem(
-                              child: Text('Real'),
-                            ),
-                            DropdownMenuItem(
-                              child: Text('Dolar'),
-                            ),
-                          ],
-                          onChanged: (_) {},
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: size.width * 0.05,
-                    ),
-                    Expanded(
-                      flex: 2,
-                      child: TextField(
-                        onChanged: (_) {},
-                        decoration: InputDecoration(
-                          enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.amber,
-                            ),
-                          ),
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.amber,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+                height: size.height * .03,
               ),
+              CurrencyBox(),
               SizedBox(
                 height: size.height * .05,
               ),
